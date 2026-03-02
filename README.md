@@ -68,6 +68,7 @@ Add this repo as a custom repo to HACS and the integration should show up.
 <p>To grant it: iLO web UI → <strong>Administration → User Administration</strong> → select the HA user → enable <strong>"Configure iLO Settings"</strong> → Save.</p>
 <p>Without this privilege, pressing the buttons will produce a <code>CONFIG_ILO_PRIV required</code> error in the HA log — all other entities work with standard read-only access.</p>
 <hr>
+
 # Features
 
 ## Discovery
@@ -180,4 +181,5 @@ Health/config entities not in diagnostics panel | EntityCategory.DIAGNOSTIC appl
 <li>Intel Xeon E3-1220 V2, mixed DDR3 DIMMs</li>
 <li>Home Assistant with <code>python-hpilo</code></li>
 </ul>
+
 
