@@ -62,13 +62,12 @@ A drop-in replacement for the [official HP iLO integration](https://www.home-ass
 # Installation
 Add this repo as a custom repo to HACS and the integration should show up. 
 
-<hr>
 <h2>Required User Actions</h2>
 <h3>iLO User Privileges for Log Clearing</h3>
 <p>The <strong>Clear iLO Event Log</strong> and <strong>Clear Server Event Log</strong> buttons require the <strong>Configure iLO Settings (<code>CONFIG_ILO_PRIV</code>)</strong> privilege.</p>
 <p>To grant it: iLO web UI → <strong>Administration → User Administration</strong> → select the HA user → enable <strong>"Configure iLO Settings"</strong> → Save.</p>
 <p>Without this privilege, pressing the buttons will produce a <code>CONFIG_ILO_PRIV required</code> error in the HA log — all other entities work with standard read-only access.</p>
-
+<hr>
 # Features
 
 ## Discovery
@@ -174,7 +173,6 @@ Temperature labels with number prefix | ^\d+- stripped from display name, origin
 Entity names missing device prefix | _attr_has_entity_name = True added to base classes
 Health/config entities not in diagnostics panel | EntityCategory.DIAGNOSTIC applied to all non-primary entities
 
-<hr>
 <h2>Tested On</h2>
 <ul>
 <li>HP ProLiant MicroServer Gen8</li>
@@ -182,3 +180,4 @@ Health/config entities not in diagnostics panel | EntityCategory.DIAGNOSTIC appl
 <li>Intel Xeon E3-1220 V2, mixed DDR3 DIMMs</li>
 <li>Home Assistant with <code>python-hpilo</code></li>
 </ul>
+
